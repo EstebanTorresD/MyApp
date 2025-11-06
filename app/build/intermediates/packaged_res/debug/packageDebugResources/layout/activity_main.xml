@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hola, [UID]"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Menú Principal de Control IoT"
+        android:textSize="16sp"
+        android:layout_marginBottom="40dp" />
+
+    <Button
+        android:id="@+id/btn_register_iot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Registrar Dispositivo IoT (Estética)"
+        android:padding="20dp"
+        android:backgroundTint="#FFC107"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_view_iot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. Interacción y Datos del Dispositivo"
+        android:padding="20dp"
+        android:backgroundTint="#17A2B8"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cerrar Sesión"
+        android:padding="16dp"
+        android:backgroundTint="#DC3545"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>
