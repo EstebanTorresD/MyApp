@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- El nombre del tema podría ser Theme.MyApp, Theme.IoTApp, etc. -->
+    <style name="Theme.MyApp" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Opciones comunes: -->
+        <!-- parent="Theme.MaterialComponents.DayNight.NoActionBar" -->
+        <!-- parent="Theme.AppCompat.Light.DarkActionBar" -->
+
+        <!-- ... otras definiciones de color ... -->
+    </style>
+
+    <!-- Asegúrate de que el tema base de la aplicación utilice este estilo: -->
+    <style name="Theme.MyApp.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

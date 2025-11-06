@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339951777393",
+    "project_id": "projectoappiot",
+    "storage_bucket": "projectoappiot.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339951777393:android:f0cefd6ae198b6250b8dd0",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9EbmGlqxYThipCKlNvkMiDDiFLCt8WGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
