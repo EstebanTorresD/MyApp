@@ -17,17 +17,16 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 1. Configuración de ViewBinding
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Comprobación de sesión activa
+
         if (authRepository.getCurrentUserId() != null) {
             navigateToMain()
             return
         }
 
-        // Lógica de Inicio de Sesión
         binding.btnLogin.setOnClickListener {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
@@ -48,7 +47,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        // Navegación al registro
         binding.btnGotoRegister.setOnClickListener {
             startActivity(Intent(this, RegisterActivity::class.java))
         }

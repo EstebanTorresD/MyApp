@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding // <<-- CLAVE: Objeto Binding
+    private lateinit var binding: ActivityMainBinding
     private val authRepository = AuthRepository()
     val user = FirebaseAuth.getInstance().currentUser
     val name = user?.displayName
@@ -20,21 +20,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // 1. Inicializar ViewBinding y establecer la vista
         binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root) // Usa la raíz del binding
+        setContentView(binding.root)
 
-        // Comprobar autenticación (Guardrail)
         if (authRepository.getCurrentUserId() == null) {
             navigateToLogin()
             return
         }
 
-        // 4) Menú Principal - Acceso a vistas a través de 'binding'
-        // Usa el operador de acceso seguro (?.) por si el usuario no ha iniciado sesión y 'user' es nulo.
+
         binding.tvWelcome.text = "Bienvenido!: $name"
 
-        // Navegación (Punto 4)
+
         binding.btnRegisterIot.setOnClickListener {
             startActivity(Intent(this, IotRegistrationActivity::class.java))
         }
@@ -43,7 +40,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, IotInteractionActivity::class.java))
         }
 
-        // Lógica de Cerrar Sesión
+
         binding.btnLogout.setOnClickListener {
             authRepository.logout()
             Toast.makeText(this, "Sesión cerrada.", Toast.LENGTH_SHORT).show()
