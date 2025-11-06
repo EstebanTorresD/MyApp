@@ -59,24 +59,13 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
-    // Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
-
-// Firebase Authentication
+    implementation(platform("com.google.firebase:firebase-bom:34.5.0"))
     implementation("com.google.firebase:firebase-auth-ktx")
-
-// Firebase Firestore
     implementation("com.google.firebase:firebase-firestore-ktx")
-
-// Kotlin Coroutines (muy útil para Firebase)
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-
-// Android UI y Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
     implementation("androidx.activity:activity-ktx:1.9.0")
-
     implementation("androidx.appcompat:appcompat:1.6.1")
-
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
